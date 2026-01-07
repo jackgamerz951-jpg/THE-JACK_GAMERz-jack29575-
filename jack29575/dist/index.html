@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>jack29575</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack | Minecraft Hacker</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: Consolas, monospace;
+  background:
+    repeating-linear-gradient(90deg, rgba(0,255,136,.05) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(0,255,136,.05) 0 1px, transparent 1px 22px),
+    radial-gradient(circle at top,#041a10,#000);
+  color:#00ffcc;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD */
+.card{
+  width:95%;
+  max-width:540px;
+  background:rgba(0,0,0,.88);
+  border:2px solid #00ff88;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 0 35px #00ff88;
+  text-align:center;
+  animation:glow 4s infinite;
+}
+@keyframes glow{
+  0%{box-shadow:0 0 15px #00ff88;}
+  50%{box-shadow:0 0 30px #00c3ff;}
+  100%{box-shadow:0 0 15px #00ff88;}
+}
+
+/* TITLE */
+h1 span{color:#00ff88;}
+.typing{
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:2px solid #00ffcc;
+  width:0;
+  margin:6px auto 14px;
+  animation:typing 3s steps(30,end) forwards, blink .8s infinite;
+}
+@keyframes typing{to{width:100%;}}
+@keyframes blink{50%{border-color:transparent;}}
+
+/* SCENE */
+.scene{
+  position:relative;
+  height:180px;
+  background:linear-gradient(#145c2e,#04140c);
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+
+/* STEVE */
+.steve{
+  position:absolute;
+  left:40px;
+  bottom:35px;
+  width:36px;
+  height:52px;
+  background:#4aa3df;
+}
+.steve::before{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:4px;
+  width:28px;
+  height:18px;
+  background:#f1c27d;
+}
+.sword{
+  position:absolute;
+  right:-16px;
+  top:16px;
+  width:6px;
+  height:42px;
+  background:linear-gradient(#00ffff,#7df9ff,#b026ff);
+  box-shadow:0 0 14px #00ffff;
+  transform-origin:bottom;
+  animation:swing 2.5s infinite;
+}
+
+/* ZOMBIE */
+.zombie{
+  position:absolute;
+  right:40px;
+  bottom:35px;
+  width:36px;
+  height:52px;
+  background:#2ecc71;
+  animation:zombie 2.5s infinite;
+}
+.zombie::before{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:4px;
+  width:28px;
+  height:18px;
+  background:#27ae60;
+}
+
+/* Animations */
+@keyframes swing{
+  0%{transform:rotate(0);}
+  40%{transform:rotate(-60deg);}
+  60%{transform:rotate(-60deg);}
+  100%{transform:rotate(0);}
+}
+@keyframes zombie{
+  0%{opacity:1;}
+  60%{opacity:0;transform:translateX(20px);}
+  100%{opacity:1;transform:translateX(0);}
+}
+
+/* HOTBAR */
+.hotbar{
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  margin:10px 0;
+}
+.slot{
+  width:34px;
+  height:34px;
+  background:#222;
+  border:2px solid #555;
+}
+.slot.active{
+  border-color:#fff;
+  box-shadow:0 0 10px #fff;
+}
+
+/* HEARTS */
+.hearts{
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  margin:8px 0;
+}
+.heart{
+  width:14px;
+  height:14px;
+  background:red;
+  clip-path: polygon(50% 80%, 0 30%, 25% 0, 50% 20%, 75% 0, 100% 30%);
+}
+
+/* XP BAR */
+.xp{
+  height:8px;
+  background:#333;
+  border-radius:6px;
+  overflow:hidden;
+  margin:8px 20px;
+}
+.xp span{
+  display:block;
+  height:100%;
+  width:70%;
+  background:linear-gradient(90deg,#00ff88,#7dff00);
+  animation:xpMove 4s infinite alternate;
+}
+@keyframes xpMove{
+  from{width:40%;}
+  to{width:80%;}
+}
+
+/* INFO */
+.section{
+  border:1px solid rgba(0,255,204,.4);
+  border-radius:12px;
+  padding:8px;
+  margin:8px 0;
+  background:rgba(0,0,0,.4);
+}
+.section strong{color:#00ff88;}
+
+.copy-btn{
+  margin-top:6px;
+  padding:6px 14px;
+  border-radius:20px;
+  border:1px solid #00ffcc;
+  background:transparent;
+  color:#00ffcc;
+  cursor:pointer;
+}
+.copy-btn:hover{
+  background:#00ffcc;
+  color:#001a10;
+}
+
+/* LINKS */
+.links a{
+  display:block;
+  margin:8px 0;
+  padding:10px;
+  border-radius:30px;
+  text-decoration:none;
+  color:#00ffcc;
+  border:1px solid #00ffcc;
+}
+.links a:hover{
+  background:linear-gradient(120deg,#00ff88,#00c3ff,#b026ff);
+  color:#001a10;
+  box-shadow:0 0 20px #00ffcc;
+}
+
+/* MUSIC BUTTON */
+.music-btn{
+  margin-top:8px;
+  padding:6px 14px;
+  border-radius:20px;
+  border:1px solid #00ff88;
+  background:transparent;
+  color:#00ff88;
+  cursor:pointer;
+}
+.music-btn:hover{
+  background:#00ff88;
+  color:#001a10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>I'm <span>Jack</span></h1>
+<div class="typing">Minecraft • Hacker • Coding</div>
+
+<div class="scene">
+  <div class="steve"><div class="sword"></div></div>
+  <div class="zombie"></div>
+</div>
+
+<div class="hearts">
+  <div class="heart"></div><div class="heart"></div><div class="heart"></div>
+  <div class="heart"></div><div class="heart"></div>
+</div>
+
+<div class="xp"><span></span></div>
+
+<div class="hotbar">
+  <div class="slot"></div><div class="slot"></div><div class="slot active"></div>
+  <div class="slot"></div><div class="slot"></div>
+  <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+</div>
+
+<div class="section">
+📍 <strong>Location:</strong> Raebareli, Uttar Pradesh
+</div>
+
+<div class="section">
+🟩 <strong>Minecraft Username:</strong><br>
+<span id="mc">jack29575</span><br>
+<button class="copy-btn" onclick="copyMC()">Copy Username</button>
+</div>
+
+<button class="music-btn" onclick="playMusic()">▶ Play Music</button>
+
+<div class="links">
+<a href="https://youtube.com/@jack_29575" target="_blank">▶ YouTube</a>
+<a href="https://www.instagram.com/jack29575" target="_blank">📸 Instagram</a>
+</div>
+
+<footer style="font-size:12px;opacity:.7;margin-top:6px;">
+© 2026 | Jack • Minecraft Java Style
+</footer>
+
+</div>
+
+<!-- Audio at end -->
+<audio id="bgm" loop>
+  <source src="mixkit-relax-beat-292.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function copyMC(){
+  navigator.clipboard.writeText("jack29575");
+  alert("Minecraft username copied!");
+}
+
+function playMusic(){
+  const m = document.getElementById("bgm");
+  m.volume = 0.5; // 50%
+  m.play();
+}
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
